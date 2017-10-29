@@ -1,3 +1,4 @@
-## User Authentication With Passport and Express 4
+Recipe Social Network
+=====================
 
-View the blog post here: http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4
+## Built with express, mongoose, mongodb, passport and materialize.css
