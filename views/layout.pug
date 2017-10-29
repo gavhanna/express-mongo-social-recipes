@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="/materialize-css/dist/css/materialize.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    include includes/nav.pug
+
+    if (error && error.length > 0)
+      br
+      h4.error-msg= error
+      br
+    if (!error)
+      block content
+
+  script(src='/jquery/dist/jquery.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+  script(src="/materialize-css/dist/js/materialize.min.js")
+  script(src="/javascripts/scripts.js")

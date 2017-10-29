@@ -1,0 +1,14 @@
+.hero
+  .title-text
+    h1 Super Tasty
+    h5 Share your shitty recipes
+    if (!user)
+      a.landing-btn.waves-effect.waves-light.btn(href="/login")
+        i.material-icons.right person
+        | Log in
+      a.landing-btn.waves-effect.waves-light.btn(href="/register")
+        i.material-icons.right person_outline
+        | Register
+    if (user)
+      p You are currently logged in as #{user.username}
+      a(href="/logout") Logout

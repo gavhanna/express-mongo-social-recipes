@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container.section
+    .row
+      .col.s12.m6.offset-m3
+        h3.center Sign Up!  
+        form(role='form', action="/register",method="post", style='max-width: 300px;')
+          .input-field
+            input#name.validate(type='text', name="username")
+            label(for='name') Name
+          .input-field
+            input#name.validate(type='text', name="email")
+            label(for='email') Email
+          .input-field
+            input#password.validate(type='password', name="password")
+            label(for='password') Password
+          .row.center
+            button.btn.waves-effect.waves-light(type='submit', name='action')
+              | Submit
+              i.material-icons.right send
+          .row.center
+            a(href='/')
+              button.btn.waves-effect.waves-light(type="button") Cancel 

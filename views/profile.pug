@@ -1,0 +1,68 @@
+extends layout.pug
+
+block content
+  if (!user)
+    h1.center No such user
+  if (user)
+    .container.section
+      .row
+        .col.s5.m4.l3
+          .card
+            .card-image
+              img(src='https://avatars0.githubusercontent.com/u/11065054?s=460&v=4')
+              span.card-title #{user.username}
+              a.btn-floating.halfway-fab.waves-effect.waves-light.red
+                i.material-icons person_add
+            .card-content
+              p
+                | #{user.email}
+      .row
+        .col.s5.m4.l3
+          ul.collection.with-header
+            li.collection-header
+              h4 Recipes
+            li.collection-item First
+            li.collection-item Second
+            li.collection-item Third
+            li.collection-item Fourth
+
+  //- .container
+  //-   .section
+  //-     #profile-page-header.card
+  //-       .card-image.waves-effect.waves-block.waves-light
+  //-         img.activator(src='https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=750&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', alt='user background')
+  //-       figure.card-profile-image
+  //-         img.circle.z-depth-2.responsive-img.activator(src='https://avatars0.githubusercontent.com/u/11065054?s=460&v=4', alt='profile image')
+  //-       .card-content
+  //-         .row
+  //-           .col.s3.offset-s3
+  //-             h4.card-title.grey-text.text-darken-4 #{user.username}
+  //-             p.medium-small.grey-text Project Manager
+  //-           .col.s2.center-align
+  //-             h4.card-title.grey-text.text-darken-4 10+
+  //-             p.medium-small.grey-text Work Experience
+  //-           .col.s2.center-align
+  //-             h4.card-title.grey-text.text-darken-4 6
+  //-             p.medium-small.grey-text Completed Projects
+  //-           .col.s1.right-align
+  //-             a.btn-floating.activator.waves-effect.waves-light.darken-2.right
+  //-               i.material-icons person_add
+  //-       .card-reveal
+  //-         p
+  //-           span.card-title.grey-text.text-darken-4
+  //-             | #{user.username}
+  //-             i.mdi-navigation-close.right
+  //-           span
+  //-             i.mdi-action-perm-identity.cyan-text.text-darken-2
+  //-             |  #{user.email}
+  //-         p
+  //-           | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+  //-         p
+  //-           i.mdi-action-perm-phone-msg.cyan-text.text-darken-2
+  //-           |  +1 (612) 222 8989
+  //-         p
+  //-           i.mdi-social-cake.cyan-text.text-darken-2
+  //-           |  18th June 1990
+  //-         p
+  //-           i.mdi-device-airplanemode-on.cyan-text.text-darken-2
+  //-           |  BAR - AUS

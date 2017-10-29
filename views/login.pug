@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container.section
+    .row
+      .col.s12.m8.offset-m2.l4.offset-l4
+        h3.center Sign In  
+        form(role='form', action="/login",method="post")
+          .input-field
+            input#name.validate(type='text', name="username")
+            label(for='name') Name
+          .input-field
+            input#password.validate(type='password', name="password")
+            label(for='password') Password
+          .row.center
+            button.btn.waves-effect.waves-light(type='submit', name='action')
+              | Submit
+              i.material-icons.right send
+          .row.center
+            a(href='/')
+              button.btn.waves-effect.waves-light(type="button") Cancel 
